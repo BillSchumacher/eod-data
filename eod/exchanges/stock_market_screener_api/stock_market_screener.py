@@ -18,13 +18,11 @@ class StockMarketScreener(RequestHandler):
         return super().handle_request(self.endpoint, query_params)
     
     def get_screener_signals(self):
-        available_signals = [
+        return [
             '50d_new_lo, 50d_new_hi',
             '200d_new_lo, 200d_new_hi',
             'bookvalue_neg',
             'bookvalue_pos',
             'wallstreet_lo',
-            'wallstreet_hi'
-            ]
-        
-        return available_signals
+            'wallstreet_hi',
+        ]
